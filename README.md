@@ -1,28 +1,19 @@
-# Moon & Me starter website
+# Moon & Me SEO-preserving website migration draft
 
-A responsive static website for Cloudflare Pages, using GitHub as the source repository.
+## Important
+This is a **staging migration** and not a finished switch-over. The live Wix site has indexed content and established URLs. This version preserves those URLs and much of the distinctive subject matter with refreshed wording (not an exact archival transfer). Before moving the domain, compare copy, images, metadata, backlinks, redirects and Search Console performance page by page. Do **not** terminate Wix before validating the migration.
 
 ## Deploy
-1. Create a GitHub repository and upload `index.html` and `products.js` to its root.
-2. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git.
-3. Select the repository. Framework preset: None. Build command: leave blank. Output directory: `/` (or use a supported static-root configuration).
-4. Add `moonandmetoys.co.uk` as a custom domain once you are ready to switch from Wix. Preserve existing DNS records until cutover.
+Upload extracted files and folders to the root of `willhayes-lgtm/moon-and-me` on `main`. Cloudflare Pages framework preset: None, build command blank, output directory `.`. Test all routes on pages.dev.
 
-## Product links
-Each entry in `products.js` can have an `asin` property, for example `asin: 'B0FNWGZFVJ'`. The website automatically constructs `https://www.amazon.co.uk/dp/ASIN?tag=rileyuk-21`.
+## Images / Amazon
+No Amazon images are scraped or copied in this version. Image slots show icons until you add **licensed** product images. For a product with appropriate rights, upload image under `/assets/` and add e.g. `"image": "/assets/pepi-nana.jpg"` to its object in `products.js`. Amazon product imagery should come from Amazon-approved tools or independently licensed manufacturer / owner-provided media. Amazon's affiliate content terms restrict copying/scraping and certain rehosting; do not assume images on your Wix site can legally be downloaded/reused unless you control the rights.
 
-The screenshot-supplied ASIN is NOT inserted as a real catalogue item because its product identity was not verified. The starter catalogue contains Moon & Me product names found on the existing site, but does not claim current Amazon stock. Add ASINs only after confirming each Amazon product detail page and suitability.
+Three product ASINs were extracted from link URLs on the EXISTING user-owned website, not independently verified against current Amazon inventory: B07Q6SMT6R (VTech phone), B07QNH8MJ5 (Goodnight Pepi Nana), 1407188542 (Goodnight Moon Baby book). Other cards link to search results, not a verified exact listing. Confirm that affiliate links are compliant with UK Associates rules.
 
-## Automation
-To populate products automatically, integrate Amazon's authorised Creators API / Product Advertising API (subject to account access) through a Cloudflare Worker with secrets. Run a scheduled job, curate eligible results, and update a JSON feed or D1 database. Do not scrape Amazon listings or copy Amazon imagery without an authorised method. Show prices and availability only when permitted by Amazon's API rules.
-
-## Notes
-The site includes required Amazon Associate disclosure language. Review privacy/cookie notices and existing SEO redirects before launch. Character artwork and programme logos should only be used with appropriate rights.
-
-## No-API launch mode (November 2026)
-
-Amazon Creators API access is currently unavailable due to account eligibility. This version does not call the Amazon API, scrape Amazon, or claim that a specific product listing is currently available. All 10 entries are discovery ideas. Entries without an `asin` open an Amazon UK search URL containing the Associates tag `rileyuk-21` and are labelled **Search on Amazon**.
-
-To upgrade an item to an exact product page, manually visit Amazon UK, check the listing matches the title, and add its verified ASIN in `products.js`, for example `asin:'B012345678'` (example only). The button will become **View on Amazon**. Do not insert ASINs you have not verified.
-
-Edit product names, categories and optional `amazonSearch` keywords in `products.js` and commit both files to GitHub. Cloudflare Pages should redeploy automatically. Review Amazon Associates link, disclosure and content requirements before public launch, especially search-result Special Links.
+## SEO notes
+- Canonical URLs intentionally target **www.moonandmetoys.co.uk** even in staging so temporary Cloudflare pages do not supplant the indexed Wix domain. Add noindex to staging at the Cloudflare edge if exposing publicly for extended periods.
+- Existing URLs preserved include /all-toys, /moon-me-books, /pepinana, /moon-baby, /col, /copy-of-all-toys-2, /who-are-we, /about-moon-and-me, /all-characters plus some low-volume routes.
+- Some original routes (blog, DVD, old page variants) still require inventory/content audit and migration; do not launch yet.
+- Match and audit SEO titles/H1s and preserve high-performing copy in final version. Some original historical copy references 2019/2024 releases and should be preserved in archive context, rather than presented as current stock.
+- Before launch: export Wix content and licensed images, collect Search Console rankings and top landing pages; preserve URLs or configure 301 mappings, add missing blog content, confirm product links and image rights, inspect robots/sitemap, then switch DNS and monitor indexing.

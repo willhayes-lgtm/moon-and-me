@@ -1,14 +1,114 @@
-// Curated search ideas; these are NOT confirmed live Amazon listings. Only verified ASINs should be added.
-// Verified ASINs get product-detail links; other entries open an Amazon UK affiliate-tagged search page.
-const PRODUCTS = [
-{title:'Moon & Me Friends Pack of 5 Figures',amazonSearch:'Moon and Me friends figures',category:'Character Toys',emoji:'🌙',description:'A set of familiar characters for imaginative play.'},
-{title:'Talking Pepi Nana Plush',amazonSearch:'Moon and Me Pepi Nana soft toy',category:'Soft Toys',emoji:'🧸',description:'A cuddly character toy inspired by the programme.'},
-{title:'Talking Moon Baby Plush',amazonSearch:'Moon and Me talking Moon Baby plush',category:'Soft Toys',emoji:'🌜',description:'Moon Baby soft toy for little fans.'},
-{title:'Goodnight, Moon Baby',amazonSearch:'Goodnight Moon Baby Andrew Davenport book',category:'Books',emoji:'📖',description:'A Moon & Me storybook for bedtime.'},
-{title:'The Little Seed',amazonSearch:'Moon and Me The Little Seed book',category:'Books',emoji:'🌱',description:'A gentle story from the Moon & Me collection.'},
-{title:'Moon & Me 4-in-1 Shaped Jigsaw',amazonSearch:'Moon and Me 4 in 1 jigsaw',category:'Puzzles & Learning',emoji:'🧩',description:'Four character puzzles for little hands.'},
-{title:'Moon Baby Wooden Number Puzzle',amazonSearch:'Moon and Me wooden number puzzle',category:'Puzzles & Learning',emoji:'🔢',description:'A character-themed wooden learning puzzle.'},
-{title:'Moon & Me Felt Colouring Set',amazonSearch:'Moon and Me colouring set',category:'Arts & Crafts',emoji:'🎨',description:'Creative character-themed colouring fun.'},
-{title:'Moon & Me Reusable Stickers',amazonSearch:'Moon and Me reusable stickers',category:'Arts & Crafts',emoji:'⭐',description:'Reusable stickers featuring familiar characters.'},
-{title:'Moon & Me Height Chart & Stickers',amazonSearch:'Moon and Me height chart stickers',category:'Gifts',emoji:'📏',description:'A decorative height chart for growing little fans.'}
+window.PRODUCTS = [
+  {
+    "title": "VTech Moon & Me Call & Learn Phone",
+    "category": "Toys",
+    "asin": "B07Q6SMT6R",
+    "emoji": "📱",
+    "description": "A Moon & Me themed learning phone with pretend calls and activities featuring familiar characters."
+  },
+  {
+    "title": "Playskool Goodnight Pepi Nana Talking Plush",
+    "category": "Toys",
+    "asin": "B07QNH8MJ5",
+    "emoji": "🧸",
+    "description": "A talking Pepi Nana plush for fans of the CBeebies series."
+  },
+  {
+    "title": "Goodnight, Moon Baby",
+    "category": "Books",
+    "asin": "1407188542",
+    "emoji": "📚",
+    "description": "A Moon & Me bedtime story by Andrew Davenport, published by Scholastic."
+  },
+  {
+    "title": "The Little Seed",
+    "category": "Books",
+    "asin": "",
+    "emoji": "📚",
+    "description": "A Moon & Me story from the Scholastic book collection."
+  },
+  {
+    "title": "Tea Time!",
+    "category": "Books",
+    "asin": "",
+    "emoji": "📚",
+    "description": "A Moon & Me picture book featuring familiar characters."
+  },
+  {
+    "title": "Pepi Nana & Friends Meet the Toys",
+    "category": "Books",
+    "asin": "",
+    "emoji": "📚",
+    "description": "An illustrated Moon & Me story for young readers."
+  },
+  {
+    "title": "Moon & Me 4-in-1 Shaped Jigsaw",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🧩",
+    "description": "A set of four shaped puzzles themed around Moon & Me."
+  },
+  {
+    "title": "Playskool Friends Pack of 5 Figures",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🪆",
+    "description": "Character figures for imaginative Moon & Me play."
+  },
+  {
+    "title": "Talking Moon Baby Plush",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🌙",
+    "description": "A plush Moon Baby character toy."
+  },
+  {
+    "title": "Moon & Me Reusable Stickers",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "⭐",
+    "description": "Moon & Me character stickers for creative play."
+  },
+  {
+    "title": "Moon & Me Felt Colouring Set",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🎨",
+    "description": "Character-themed felt colouring activity."
+  },
+  {
+    "title": "Moon Baby Wooden Number Puzzle",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🔢",
+    "description": "A wooden number puzzle themed around Moon Baby."
+  },
+  {
+    "title": "Pepi Nana Push Along by Orange Tree Toys",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🚂",
+    "description": "A push-along character toy by Orange Tree Toys."
+  },
+  {
+    "title": "Colly Wobble Car and Figure Set",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "🚗",
+    "description": "A Playskool toy vehicle and figure from Moon & Me."
+  },
+  {
+    "title": "Moon & Me Height Chart & Stickers",
+    "category": "Toys",
+    "asin": "",
+    "emoji": "📏",
+    "description": "A character-themed height chart with stickers."
+  },
+  {
+    "title": "Moon & Me Pyjamas",
+    "category": "Clothes",
+    "asin": "",
+    "emoji": "👚",
+    "description": "Moon & Me themed nightwear."
+  }
 ];
