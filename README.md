@@ -18,3 +18,11 @@ To populate products automatically, integrate Amazon's authorised Creators API /
 
 ## Notes
 The site includes required Amazon Associate disclosure language. Review privacy/cookie notices and existing SEO redirects before launch. Character artwork and programme logos should only be used with appropriate rights.
+
+## No-API launch mode (November 2026)
+
+Amazon Creators API access is currently unavailable due to account eligibility. This version does not call the Amazon API, scrape Amazon, or claim that a specific product listing is currently available. All 10 entries are discovery ideas. Entries without an `asin` open an Amazon UK search URL containing the Associates tag `rileyuk-21` and are labelled **Search on Amazon**.
+
+To upgrade an item to an exact product page, manually visit Amazon UK, check the listing matches the title, and add its verified ASIN in `products.js`, for example `asin:'B012345678'` (example only). The button will become **View on Amazon**. Do not insert ASINs you have not verified.
+
+Edit product names, categories and optional `amazonSearch` keywords in `products.js` and commit both files to GitHub. Cloudflare Pages should redeploy automatically. Review Amazon Associates link, disclosure and content requirements before public launch, especially search-result Special Links.
